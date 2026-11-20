@@ -2803,7 +2803,7 @@ $("#copy").onclick=()=>{
 };
 
 /* resume + LinkedIn: fill these in and the links appear in the menu and on the postcard */
-const EXT_LINKS={resume:"",linkedin:"https://www.linkedin.com/in/lauren-wheeler-402880366",behance:"https://www.behance.net/laurenwheeler3"};
+const EXT_LINKS={resume:"Lauren-Wheeler-Resume.pdf",linkedin:"https://www.linkedin.com/in/lauren-wheeler-402880366",behance:"https://www.behance.net/laurenwheeler3"};
 document.querySelectorAll("[data-link]").forEach(a=>{const u=EXT_LINKS[a.dataset.link];if(u)a.href=u;else a.remove()});
 document.querySelectorAll("[data-ext]").forEach(w=>{w.hidden=!w.querySelector("a")});
 document.querySelectorAll("[data-foot]").forEach(a=>{const u=EXT_LINKS[a.dataset.foot];if(u){a.href=u}else{a.classList.add("pending");a.removeAttribute("download");a.setAttribute("aria-disabled","true");a.closest("li").hidden=true}});
