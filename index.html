@@ -1928,6 +1928,7 @@ body[data-view="archive"],body[data-view="archive"]::before,#v-archive{backgroun
 .gr-btn{background:transparent!important;color:#F4F0E7!important;border:1px solid rgba(244,240,231,.85);padding:8px 18px!important;font-size:.84rem!important;transition:background .2s,color .2s}
 .gr-t:hover .gr-btn,.gr-t:focus-visible .gr-btn{background:#F4F0E7!important;color:#1F1D19!important}
 .gr-hero{height:calc(100vh - 74px - 160px)!important}
+@media (max-width:760px){.gr-hero{height:auto!important;width:100%}.gr-t{min-width:0}.gr-hero .gr-d,.gr-wide .gr-d{display:none}}
 
 #pg-main.gr{display:grid!important}
 .gr-now .dot,.pg-now .dot,.now-line .dot{background:var(--red)!important}
@@ -1975,7 +1976,7 @@ body[data-view="archive"],body[data-view="archive"]::before,#v-archive{backgroun
   <div class="wrap">
     <div class="now-line">
       <span class="label"><span class="dot"></span>On my desk now</span>
-      <ul class="now-list"><li><a href="#p-ear-tag"><b>FLINT</b><span>A livestock platform that turns animal identification into a lifelong record.</span><em>In progress →</em></a></li><li><a href="#p-from-dust"><b>From Dust</b><span>Everything that had to happen, from the Big Bang to one life in Kansas.</span><em>In progress →</em></a></li><li><div><b>A healthcare design project</b><span>Something I can't share yet, but I'm excited about.</span><em>Coming soon</em></div></li></ul>
+      <ul class="now-list"><li><a href="#p-ear-tag"><b>FLINT</b><span>A livestock platform that turns animal identification into a lifelong record.</span><em>In progress →</em></a></li><li><a href="#p-from-dust"><b>From Dust</b><span>Everything that had to happen, from the Big Bang to one life in Kansas.</span><em>In progress →</em></a></li><li><div><b>A healthcare design project</b><span>Something I can't share yet, but I'm excited about.</span><em>In progress</em></div></li></ul>
     </div>
   </div>
   <div class="cov-e hello-pc" id="home-hello"><div class="plate" role="img" aria-label="Prairie grass against a golden Kansas sunset"></div><div class="shade-pc"></div>
@@ -2479,10 +2480,10 @@ function trailFor(p){
 }
 function renderProject(id,tab){
   const i=P.findIndex(p=>p.id===id); if(i<0) return false;
-  const p=P[i],prev=P[(i-1+P.length)%P.length],next=P[(i+1)%P.length];
+  const p=P[i],PL=(typeof pvList==="function"?pvList():P),j=PL.findIndex(q=>q.id===id),prev=j<0?PL[PL.length-1]:PL[(j-1+PL.length)%PL.length],next=j<0?PL[0]:PL[(j+1)%PL.length];
   const img=k=>`<span class="pj2-img" style="background-image:var(--${k});aspect-ratio:${SAR[k]||"3/2"}"></span>`;
   const trail=p.noResearch?[]:trailFor(p);
-  const during=DURING[p.id]||[];
+  const during=(DURING[p.id]||[]).filter(([k])=>k);
   const meta=[["Year",p.yr],["What",p.disc]].concat(p.team&&p.team!=="Solo"?[["Team",p.team]]:[]);
   const gallery=(p.cat==="photo"&&p.shots&&p.shots.length>6);
   $("#pj").innerHTML=`<a class="back" href="#archive">← All projects</a>
@@ -2778,7 +2779,7 @@ addEventListener("hashchange",go);
 /* write-back postcard */
 (function(){const note=$("#pc-note"),rp=$("#pc-reply"),sent=$("#pc-sent"),box=$("#rp-photos");let pick=GALLERY.find(g=>g[0]==="i-horses")||GALLERY[0];
   box.innerHTML=GALLERY.filter(g=>["i-horses","i-barnsil","i-silos","i-sunset","i-barnflag"].includes(g[0])).map(([k,l],i)=>`<button type="button" data-k="${k}" aria-label="${STAMP_CAP[k]}" title="${STAMP_CAP[k]}" aria-pressed="false" style="background-image:var(--${k})"><span>${STAMP_CAP[k]}</span></button>`).join("")+`<button type="button" class="rp-more" aria-label="See all the stamps" title="See all the stamps">+</button>`;
-  rp.insertAdjacentHTML("beforeend",`<div class="rp-album" id="rp-album" hidden role="dialog" aria-label="Choose a stamp"><div class="rpa-top"><span class="rpa-h">Choose a stamp</span><button type="button" class="btn ghost" id="rpa-close">Close</button></div><div class="rpa-grid">${GALLERY.filter(g=>STAMP_CAP[g[0]]).map(([k])=>`<button type="button" class="rpa-s" data-k="${k}"><span class="rpa-img" style="background-image:var(--${k})"><b>${STAMP_CAP[k]}</b><em>${STAMP_YR[k]||"2026"}</em></span><span class="rpa-cap">${STAMP_CAP[k]}</span></button>`).join("")}</div><p class="rpa-note">More stamps coming as I add photos.</p></div>`);
+  rp.insertAdjacentHTML("beforeend",`<div class="rp-album" id="rp-album" hidden role="dialog" aria-label="Choose a stamp"><div class="rpa-top"><span class="rpa-h">Choose a stamp</span><button type="button" class="btn ghost" id="rpa-close">Close</button></div><div class="rpa-grid">${GALLERY.filter(g=>STAMP_CAP[g[0]]).map(([k])=>`<button type="button" class="rpa-s" data-k="${k}"><span class="rpa-img" style="background-image:var(--${k})"><b>${STAMP_CAP[k]}</b><em>${STAMP_YR[k]||"2026"}</em></span><span class="rpa-cap">${STAMP_CAP[k]}</span></button>`).join("")}</div></div>`);
   const album=$("#rp-album");
   album.onclick=e=>{const b=e.target.closest(".rpa-s");if(b){setPick(b.dataset.k);album.hidden=true;return}if(e.target.closest("#rpa-close"))album.hidden=true};
   const setPick=k=>{pick=GALLERY.find(g=>g[0]===k)||pick;$("#rp-stamp").style.backgroundImage=`var(--${pick[0]})`;{const b=$("#rp-stamp b");if(b)b.textContent=STAMP_CAP[pick[0]]||"Kansas"}{const e=$("#rp-stamp em");if(e)e.textContent=STAMP_YR[pick[0]]||"2026"}box.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===pick[0]))};
@@ -2805,7 +2806,7 @@ $("#copy").onclick=()=>{
 const EXT_LINKS={resume:"",linkedin:"https://www.linkedin.com/in/lauren-wheeler-402880366",behance:"https://www.behance.net/laurenwheeler3"};
 document.querySelectorAll("[data-link]").forEach(a=>{const u=EXT_LINKS[a.dataset.link];if(u)a.href=u;else a.remove()});
 document.querySelectorAll("[data-ext]").forEach(w=>{w.hidden=!w.querySelector("a")});
-document.querySelectorAll("[data-foot]").forEach(a=>{const u=EXT_LINKS[a.dataset.foot];if(u){a.href=u}else{a.classList.add("pending");a.removeAttribute("download");a.setAttribute("aria-disabled","true");a.querySelector(".sf-v").textContent="Coming soon"}});
+document.querySelectorAll("[data-foot]").forEach(a=>{const u=EXT_LINKS[a.dataset.foot];if(u){a.href=u}else{a.classList.add("pending");a.removeAttribute("download");a.setAttribute("aria-disabled","true");a.closest("li").hidden=true}});
 /* measure nav + desk strip so the home cover leaves room for both */
 function fitHome(){const t=document.querySelector(".top"),n=document.querySelector("#v-home .now-line");if(!t||!n)return;
   document.documentElement.style.setProperty("--toph",t.offsetHeight+"px");document.documentElement.style.setProperty("--nowh",n.offsetHeight+"px")}
