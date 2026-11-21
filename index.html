@@ -1962,6 +1962,13 @@ body[data-view="archive"],body[data-view="archive"]::before,#v-archive{backgroun
 .pc-turn-in{animation:pcIn .32s cubic-bezier(0,0,.2,1)}
 @keyframes pcOut{from{transform:perspective(1400px) rotateY(0)}to{transform:perspective(1400px) rotateY(90deg)}}
 @keyframes pcIn{from{transform:perspective(1400px) rotateY(-90deg)}to{transform:perspective(1400px) rotateY(0)}}
+
+/* one view toggle style site-wide (Reading room matches Projects) */
+.rx-seg{display:inline-flex!important;border:1px solid rgba(237,232,220,.3)!important;border-radius:99px;padding:3px;overflow:visible!important}
+.rx-seg button{padding:6px 16px!important;border-radius:99px;color:#C9C2B2!important;font:500 .84rem var(--f-body)!important;border:0!important}
+.rx-seg button[aria-pressed="true"]{background:#F4F0E7!important;color:#1F1D19!important}
+.rx-seg button:hover{color:#F4F0E7!important}
+.rx-seg button[aria-pressed="true"]:hover{color:#1F1D19!important}
 </style>
 
 <header class="top" id="topbar">
