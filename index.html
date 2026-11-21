@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&family=Caveat:wght@500;600&display=swap">
 <style>
-:root{--i-redwoods:url("img/redwoods.jpg");--i-silos:url("img/silos.jpg");--i-guernica:url("img/guernica.jpg");--i-leaf:url("img/leaf.jpg");--i-prairie:url("img/prairie.jpg");--i-lake:url("img/lake.jpg");--i-barnsil:url("img/barnsil.jpg");--i-camera:url("img/camera.jpg");--i-barnflag:url("img/barnflag.jpg");--i-studio:url("img/studio.jpg");--i-nye:url("img/nye.jpg");--i-desk:url("img/desk.jpg");--i-sketch:url("img/sketch.jpg");--i-sunset:url("img/sunset.jpg");--i-horses:url("img/horses.jpg");--i-og:url("img/og.jpg");--i-tt:url("img/tt.jpg");--i-tw:url("img/tw.jpg");--i-walk:url("img/walk.jpg");--i-field:url("img/field.jpg");--i-um:url("img/um.jpg");}
+:root{--i-redwoods:url("img/redwoods.jpg");--i-silos:url("img/silos.jpg");--i-guernica:url("img/guernica.jpg");--i-leaf:url("img/leaf.jpg");--i-prairie:url("img/prairie.jpg");--i-lake:url("img/lake.jpg");--i-barnsil:url("img/barnsil.jpg");--i-camera:url("img/camera.jpg");--i-barnflag:url("img/barnflag.jpg");--i-studio:url("img/studio.jpg");--i-rkscreens:url("img/rkscreens.png");--i-reiemail:url("img/reiemail.png");--i-tw1:url("img/tw1.png");--i-tw2:url("img/tw2.png");--i-tw3:url("img/tw3.png");--i-tw4:url("img/tw4.png");--i-twwall:url("img/twwall.jpg");--i-ogprogram:url("img/ogprogram.jpg");--i-ogthumbs:url("img/ogthumbs.jpg");--i-ttboxes:url("img/ttboxes.jpg");--i-tthand:url("img/tthand.jpg");--i-ttscreen:url("img/ttscreen.jpg");--i-ttboard:url("img/ttboard.jpg");--i-ttcards:url("img/ttcards.jpg");--i-stolen:url("img/stolen.jpg");--i-bench:url("img/bench.jpg");--i-nye:url("img/nye.jpg");--i-desk:url("img/desk.jpg");--i-sketch:url("img/sketch.jpg");--i-sunset:url("img/sunset.jpg");--i-horses:url("img/horses.jpg");--i-og:url("img/og.jpg");--i-tt:url("img/tt.jpg");--i-tw:url("img/tw.jpg");--i-walk:url("img/walk.jpg");--i-field:url("img/field.jpg");--i-um:url("img/um.jpg");}
 :root{--i-roamku:url("img/roamku.jpg");--i-vault:url("img/vault.jpg");--i-carnival:url("img/carnival.jpg");}
 :root{--i-maui:url("img/maui.jpg");}
 :root{--i-rei:url("img/rei.jpg");--i-reitag:url("img/reitag.jpg");--i-reibrief:url("img/reibrief.jpg");--i-reiinsight:url("img/reiinsight.jpg");--i-reigrid:url("img/reigrid.jpg");}
@@ -1973,6 +1973,13 @@ body[data-view="archive"],body[data-view="archive"]::before,#v-archive{backgroun
 /* real book cover */
 .sd-book.sd-cover{background:var(--i-nye) center/cover no-repeat!important;aspect-ratio:900/1420!important;padding:0!important;box-shadow:0 18px 34px rgba(0,0,0,.28)!important}
 .rxo-cover{display:block;width:100%;background-size:cover;background-position:center;box-shadow:0 14px 30px rgba(0,0,0,.35)}
+
+/* cut-out mockups (phones, book spreads) sit right on the page, no box */
+.pj2-out{grid-template-columns:minmax(0,1fr)!important;align-content:start}
+.pj2-shots{min-width:0}
+.pj2-shots figure{min-width:0}
+.pj2-img.cut{box-shadow:none!important;background-size:contain!important;background-repeat:no-repeat!important;background-color:transparent!important}
+.pj2-shots figure:has(.pj2-img.cut[style*="rkscreens"]),.pj2-shots figure:has(.pj2-img[style*="tw2"]),.pj2-shots figure:has(.pj2-img[style*="tw3"]),.pj2-shots figure:has(.pj2-img[style*="tw4"]){grid-column:1/-1}
 </style>
 
 <header class="top" id="topbar">
@@ -2200,7 +2207,7 @@ const P=[
   research:"Data from the CDC's National Center for Health Statistics, NORC at the University of Chicago, the DEA, U.S. Customs and Border Protection, the Office of the Director of National Intelligence, and SAMHSA, always weighed against the real people behind the data."},
  {id:"old-growth",t:"Old Growth",cat:"brand",disc:"Conference identity",yr:"2026",team:"Solo",tone:"i-og",ar:"838/656",
   link:["See the full identity system on Behance","https://www.behance.net/gallery/249063553/OLD-GROWTH-Conference-Identity-System"],
-  shots:["i-og4","i-og5","i-og3","i-og16","i-og9","i-og8","i-og6"],resImg:["i-redwoods","i-ognb1","i-ognb2"],
+  shots:["i-og4","i-ogprogram","i-og5","i-og3","i-og16","i-og9","i-og8","i-og6"],resImg:["i-redwoods","i-ognb1","i-ogthumbs","i-ognb2"],
   why:"A three-day, invite-only conference held entirely inside the ancient coast redwoods of Jedediah Smith State Park.",
   quote:"The redwoods were the first place I felt alive again after losing someone I loved. I built this for whoever needs that next.",
   work:"OLD GROWTH is for people who need to be reminded that the world contains things worth staying for. Eight scientists. No stage. No podium. No technology. Invite only. If this found you, someone thought you needed it. The identity lives on paper and in the woods: letterpress-style invitations and postcards, speaker badges, a fold-out field program, trail maps, matchbooks, an enamel camp mug, and a bottle that says \"Always Living.\"",
@@ -2211,12 +2218,13 @@ const P=[
   work:"A private app that plans travel across the four Grand Slams, remembers suite preferences, and keeps the photos you take at each one. Finish all four and the year closes with a Rolex.",
   research:"Who travels the full circuit, what they expect from a concierge, and what they want to keep afterward."},
  {id:"roamku",link:["See the full case study on Behance","https://www.behance.net/gallery/247607933/RoamKU-Campus-Activity-Matcher"],t:"roamKU",cat:"interaction",disc:"Mobile app, IXD 101",yr:"2026",team:"Solo",tone:"i-roamku",ar:"838/660",
-  shots:["i-rk2","i-rk5","i-rk6","i-rk7","i-rk8"],resImg:["i-rk1","i-rk3","i-rk4"],
+  shots:["i-rkscreens","i-rk2","i-rk5","i-rk6","i-rk7","i-rk8"],resImg:["i-rk1","i-rk3","i-rk4"],
   why:"A campus activity matcher that helps students find others who share their interests, and turns a potentially lonely Saturday into a social outdoor adventure.",
   quote:"Max's journey is really about managing anxiety, not finding activities. He already knows he wants to hike. What stops him is the fear of showing up to the wrong group or messaging a stranger.",
   work:"RoamKU matches students based on shared interests and surfaces real activities happening on and around campus today, this week, right now. It lowers the barrier from \"I want to do something\" to \"I'm going\": discover beginner-friendly and niche activities, see who's going before you join, and go from opening the app to confirmed in under two minutes. Twelve screens in Figma tell one story, from Max's first tap to his spot at Clinton Lake. The earthy palette, pill buttons, and quick replies all trace back to a moment in his journey.",
   research:"College students want to get outside and meet people, but club fairs are overwhelming, cold messages feel invasive, and there's no same-day option. I built a persona, Max Rivera, and mapped his Saturday morning step by step. The key insight came from the hesitation right before joining: students need to know a group is welcoming before they commit, which shaped the messaging screen and the \"see who's going\" feature."},
  {id:"typographic-workbook",t:"Typographic Workbook",cat:"type",disc:"Book design",yr:"2026",team:"Solo",tone:"i-tw",ar:"840/652",
+  shots:["i-tw1","i-tw2","i-tw3","i-tw4"],resImg:["i-twwall"],
   why:"A full book on the rules of type, paired with my own photographs.",
   quote:"Each chapter pairs a rule of type with one of my photographs, so the lesson and the picture teach each other.",
   work:"A designed and laid-out book on typographic rules. Each chapter corresponds to a photograph I took.",
@@ -2234,13 +2242,13 @@ const P=[
   research:"It started with hand sketches, working out how one line could be both the lettering and the animal, and with time spent around the herd itself. Both of the cattle photos are mine."},
  {id:"tiny-torches",t:"Tiny Torches",cat:"brand",disc:"Packaging & brand identity",yr:"2026",team:"Solo",tone:"i-tt",ar:"836/654",
   link:["See the full case study on Behance","https://www.behance.net/gallery/246619487/Tiny-Torches"],
-  shots:["i-ttpack","i-ttlogos","i-tthow","i-ttcolors","i-ttshirt","i-ttparty"],resImg:["i-ttpattern","i-ttcard"],
+  shots:["i-ttcards","i-ttpack","i-ttboard","i-tthand","i-ttboxes","i-ttlogos","i-tthow","i-ttcolors","i-ttshirt","i-ttparty"],resImg:["i-ttpattern","i-ttscreen","i-ttcard"],
   why:"A white-elephant packaging assignment: I drew a pack of Dollar Tree birthday candles and gave them a brand rooted in where birthday candles began.",
   quote:"Birthday candles go back to ancient Greece. Looking back, I wish I'd trusted that idea all the way.",
   work:"This started as a white-elephant assignment. Everyone drew a Dollar Tree item at random, and I got a pack of birthday candles. Digging into their history, I found the custom is often traced to ancient Greece, where people are said to have lit candles on moon-shaped cakes for Artemis. That's where the name Tiny Torches comes from, and my first direction leaned all the way in: a playful, slightly irreverent Greek take. With feedback from my professor I moved toward a more familiar birthday look, but kept the part I loved most, the hand-drawn feel. The palette came straight from the candles in the pack: celebration blue, birthday cake yellow, party flame orange, and vanilla icing white. The system includes a logo in three colorways, hand-drawn stickers and doodles, a how-to-use panel, packaging dielines, and a T-shirt, set in RL Horizon with Inter and photographed at a real party.",
   research:"The history of birthday candles, back to the Greek offerings to Artemis, plus the shelf, the shopper, and what makes a one-dollar thing feel like a gift. If I did it again, I'd push the Greek idea further."},
  {id:"go-find-it",t:"Camp Unknown: Find Your Six",cat:"brand",disc:"Campaign for REI: microsite, email, social",yr:"2026",team:"Solo",tone:"i-rei",ar:"2000/1140",
-  shots:["i-reitag","i-reibrief","i-reiinsight","i-cu7","i-cu14"],resImg:"i-reigrid",link:["See the full case study on Behance","https://www.behance.net/gallery/249181085/Camp-Unknown-Find-Your-Six"],
+  shots:["i-reitag","i-reiemail","i-reibrief","i-reiinsight","i-cu7","i-cu14"],resImg:"i-reigrid",link:["See the full case study on Behance","https://www.behance.net/gallery/249181085/Camp-Unknown-Find-Your-Six"],
   why:"A hidden pop-up camping experience built around one product and one question.",
   quote:"Six isn't just a spec. Six is a question: who are the six people you keep meaning to get outside with? The product is the vehicle. The people are the point.",
   work:"REI asked for a campaign to launch the Westward 6, their largest basecamp tent, which sleeps six. Instead of a traditional product launch, I built a hunt. The location of the pop-up, Camp Unknown, is never announced. It's discovered. Coordinates arrive by email, and to see the tent you have to go out and find it, ideally with your six. The campaign runs across a microsite, an email series, and social posts, all designed in Figma.",
@@ -2437,7 +2445,7 @@ function renderHub(){
 }
 
 /* ---------- project ---------- */
-const SAR={"i-reitag": "1999/717", "i-reibrief": "2/1", "i-reiinsight": "2/1", "i-stirton": "1508/982", "i-stscript": "1534/954", "i-calf": "1676/1102", "i-reigrid": "1398/1192", "i-stsketch2": "860/802", "i-rk1": "800/1008", "i-rk2": "800/715", "i-rk3": "800/731", "i-rk4": "800/756", "i-rk6": "800/1246", "i-rk7": "800/508", "i-rk8": "800/826", "i-rk5": "800/1840", "i-og3": "800/600", "i-og4": "800/316", "i-og5": "800/800", "i-og6": "800/533", "i-og8": "800/533", "i-og9": "800/571", "i-og16": "800/460", "i-cu7": "800/617", "i-cu14": "800/514", "i-ttpack": "800/417", "i-ttlogos": "800/167", "i-ttcard": "800/418", "i-ttshirt": "800/660", "i-tthow": "800/638", "i-ttcolors": "800/643", "i-ttparty": "800/345", "i-ttpattern": "800/332", "i-ttabout": "800/460", "i-ognb1": "1300/991", "i-ognb2": "1300/929", "i-owl": "900/1230", "i-redwoods": "748/1128"};
+const SAR={"i-reitag":"1999/717","i-reibrief":"2/1","i-reiinsight":"2/1","i-stirton":"1508/982","i-stscript":"1534/954","i-calf":"1676/1102","i-reigrid":"1398/1192","i-stsketch2":"860/802","i-rk1":"800/1008","i-rk2":"800/715","i-rk3":"800/731","i-rk4":"800/756","i-rk6":"800/1246","i-rk7":"800/508","i-rk8":"800/826","i-rk5":"800/1840","i-og3":"800/600","i-og4":"800/316","i-og5":"800/800","i-og6":"800/533","i-og8":"800/533","i-og9":"800/571","i-og16":"800/460","i-cu7":"800/617","i-cu14":"800/514","i-ttpack":"800/417","i-ttlogos":"800/167","i-ttcard":"800/418","i-ttshirt":"800/660","i-tthow":"800/638","i-ttcolors":"800/643","i-ttparty":"800/345","i-ttpattern":"800/332","i-ttabout":"800/460","i-ognb1":"1300/991","i-ognb2":"1300/929","i-owl":"900/1230","i-redwoods":"748/1128","i-rkscreens":"1800/859","i-reiemail":"457/930","i-tw1":"1250/869","i-tw2":"1600/466","i-tw3":"1600/466","i-tw4":"1600/466","i-twwall":"852/952","i-ogprogram":"1800/995","i-ogthumbs":"1770/345","i-ttboxes":"858/1068","i-tthand":"1598/1136","i-ttscreen":"1508/1056","i-ttboard":"776/986","i-ttcards":"722/1126","i-stolen":"1760/355","i-bench":"796/996"};
 Object.assign(SAR,{"i-ai01": "1300/892", "i-ai02": "1300/866", "i-ai03": "1300/866", "i-ai04": "1300/866", "i-ai05": "1300/867", "i-ai06": "867/1300", "i-ai07": "1300/867", "i-ai08": "1300/867", "i-ai09": "1300/867", "i-ai10": "1300/867", "i-ai11": "867/1300", "i-ai12": "1300/867", "i-ai13": "1300/867", "i-ai14": "1300/867", "i-ai15": "1300/867", "i-ai16": "1300/867", "i-ai17": "1300/867", "i-ai18": "867/1300", "i-ai19": "867/1300"});
 const STAMP_YR={"i-sunset":"2026","i-horses":"2026","i-barnsil":"2026","i-silos":"2026","i-barnflag":"2026"};
 const STAMP_CAP={"i-sunset":"Kansas sunset","i-horses":"Horse pasture","i-barnsil":"Barn at sundown","i-silos":"Silos, Atchison County","i-barnflag":"Family farm","i-redwoods":"The redwoods","i-sketch":"Where my brain goes","i-guernica":"The page"};
@@ -2479,7 +2487,7 @@ const TRAIL2={
   {k:"What I studied",h:"Trees that have been here millions of years longer than us.",p:"The coast redwood and the giant sequoia, and how they affect our physical, mental, and spiritual bodies.",img:"i-redwoods",cap:"Jedediah Smith Redwoods State Park, California"},
   {quote:"If this found you, someone thought you needed it."},
   {k:"What changed my thinking",h:"A forest is held together underground.",p:"Mycorrhizal fungi became a big idea, a sticky underground network that connects the forest, and so did palimpsests, the way trees hold layers of change over time.",img:"i-ognb2",cap:"Notebook: names and big ideas"},
-  {k:"What emerged",h:"Field Notes. Follow the Roots. Meet Me in the Woods.",p:"Name ideas came from a Lord Huron lyric about taking a little journey to the unknown and coming back changed."},
+  {k:"What emerged",h:"Field Notes. Follow the Roots. Meet Me in the Woods.",p:"Name ideas came from a Lord Huron lyric about taking a little journey to the unknown and coming back changed.",img:"i-ogthumbs",cap:"Early thumbnails, back when it had a different name"},
   {k:"The final direction",h:"Casual, grounding, warm, and inviting.",p:"An identity that lives on paper and in the woods.",img:"i-og4",cap:"Old Growth, printed"}
  ]
 };
@@ -2497,10 +2505,11 @@ function trailFor(p){
   const out=[];if(p.research)out.push({k:"Where it started",p:p.research});
   [].concat(p.resImg||[]).forEach(k=>out.push({img:k}));return out;
 }
+const PJ_CUT=new Set(["i-rkscreens","i-reiemail","i-tw1","i-tw2","i-tw3","i-tw4"]);
 function renderProject(id,tab){
   const i=P.findIndex(p=>p.id===id); if(i<0) return false;
   const p=P[i],PL=(typeof pvList==="function"?pvList():P),j=PL.findIndex(q=>q.id===id),prev=j<0?PL[PL.length-1]:PL[(j-1+PL.length)%PL.length],next=j<0?PL[0]:PL[(j+1)%PL.length];
-  const img=k=>`<span class="pj2-img" style="background-image:var(--${k});aspect-ratio:${SAR[k]||"3/2"}"></span>`;
+  const img=k=>`<span class="pj2-img${PJ_CUT.has(k)?" cut":""}" style="background-image:var(--${k});aspect-ratio:${SAR[k]||"3/2"}"></span>`;
   const trail=p.noResearch?[]:trailFor(p);
   const during=(DURING[p.id]||[]).filter(([k])=>k);
   const meta=[["Year",p.yr],["What",p.disc]].concat(p.team&&p.team!=="Solo"?[["Team",p.team]]:[]);
@@ -2856,7 +2865,8 @@ addEventListener("keydown",e=>{if(!GAL||$("#lightbox").hidden)return;if(e.key===
   btn.addEventListener("click",()=>set(!card.classList.contains("typed")))})();
 /* sketchbooks (reading room): add page keys to pages[] and they show up */
 const SKETCHBOOKS=[
- {id:"wandering",t:"Wandering Drawings",yr:"Ongoing",note:"Drawings where I don't think. My hand wanders and my brain gets out onto the page.",pages:["i-sketch"]}
+ {id:"wandering",t:"Wandering Drawings",yr:"Ongoing",note:"Drawings where I don't think. My hand wanders and my brain gets out onto the page.",pages:["i-sketch","i-bench"]},
+ {id:"stolen",t:"Stolen Paintings, Sketches",yr:"2026",note:"Layout sketches for an art gallery data visualization about stolen paintings.",pages:["i-stolen"]}
 ];
 (()=>{const sh=$("#sb-shelf");if(!sh)return;
   sh.innerHTML=SKETCHBOOKS.map((b,k)=>`<article class="sb-book"><button class="sb-cover" type="button" data-sb="${k}" aria-label="Open ${b.t}"><span class="sb-page" style="background:var(--${b.pages[0]}) center/cover no-repeat"></span></button>
@@ -2929,6 +2939,8 @@ $("#st-down")?.addEventListener("click",()=>$("#story-rings").scrollIntoView({be
 const RX_ITEMS=[
  {g:"inv",kind:"object",img:"i-guernica",ar:"1568/1126",t:"The torn page",cap:"Front: Guernica",place:"Found in Atchison, Kansas",col:1,span:5,mt:0,flip:"i-owlside",trail:true,
   more:"A small, aged page with Guernica on it and a penciled “Picasso” underneath. Page [43] in the corner told me it was torn from a book, and that started a year of following it back to where it came from.",go:["Follow the whole trail","#r-the-page"],rel:[7,4]},
+ {g:"mar",kind:"scan",img:"i-stolen",ar:"1760/355",t:"Layout sketches, stolen paintings",cap:"Sketchbook",place:"Lawrence, Kansas",col:1,span:12,mt:60,more:"Thumbnail sketches for an art gallery data visualization about stolen paintings: floor plans, walls, and how the missing work could be counted."},
+ {g:"mar",kind:"scan",img:"i-bench",ar:"776/996",t:"Bench coloring sheet",cap:"Wandering drawing",place:"Lawrence Transit, Freedom by Design",col:4,span:4,mt:40,more:"My wandering-line drawing for Freedom by Design's benches for Lawrence Transit."},
  {g:"desk",kind:"book",img:"i-nye",ar:"900/1420",t:"Three Views of Man",sub:"Robert D. Nye",cap:"Reading now",place:"On my desk",col:7,span:2,mt:140,more:"What I'm reading right now.",rel:[3]},
  {g:"desk",kind:"photo",img:"i-desk",ar:"1508/1132",t:"Printed and highlighted",cap:"My desk",place:"Lawrence, Kansas",col:10,span:3,mt:40,more:"Printed articles, sticky notes, and the highlights I come back to.",rel:[2]},
  {g:"inv",kind:"paper",read:"the-page",t:"Art in Tragedy",cap:"Research paper",place:"Research paper · 2025",col:2,span:2,mt:70,more:"How Picasso made art out of his own grief, traced through one torn page.",rel:[1,7]},
