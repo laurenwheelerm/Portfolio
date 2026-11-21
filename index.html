@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&family=Caveat:wght@500;600&display=swap">
 <style>
-:root{--i-redwoods:url("img/redwoods.jpg");--i-silos:url("img/silos.jpg");--i-guernica:url("img/guernica.jpg");--i-leaf:url("img/leaf.jpg");--i-prairie:url("img/prairie.jpg");--i-lake:url("img/lake.jpg");--i-barnsil:url("img/barnsil.jpg");--i-camera:url("img/camera.jpg");--i-barnflag:url("img/barnflag.jpg");--i-studio:url("img/studio.jpg");--i-desk:url("img/desk.jpg");--i-sketch:url("img/sketch.jpg");--i-sunset:url("img/sunset.jpg");--i-horses:url("img/horses.jpg");--i-og:url("img/og.jpg");--i-tt:url("img/tt.jpg");--i-tw:url("img/tw.jpg");--i-walk:url("img/walk.jpg");--i-field:url("img/field.jpg");--i-um:url("img/um.jpg");}
+:root{--i-redwoods:url("img/redwoods.jpg");--i-silos:url("img/silos.jpg");--i-guernica:url("img/guernica.jpg");--i-leaf:url("img/leaf.jpg");--i-prairie:url("img/prairie.jpg");--i-lake:url("img/lake.jpg");--i-barnsil:url("img/barnsil.jpg");--i-camera:url("img/camera.jpg");--i-barnflag:url("img/barnflag.jpg");--i-studio:url("img/studio.jpg");--i-nye:url("img/nye.jpg");--i-desk:url("img/desk.jpg");--i-sketch:url("img/sketch.jpg");--i-sunset:url("img/sunset.jpg");--i-horses:url("img/horses.jpg");--i-og:url("img/og.jpg");--i-tt:url("img/tt.jpg");--i-tw:url("img/tw.jpg");--i-walk:url("img/walk.jpg");--i-field:url("img/field.jpg");--i-um:url("img/um.jpg");}
 :root{--i-roamku:url("img/roamku.jpg");--i-vault:url("img/vault.jpg");--i-carnival:url("img/carnival.jpg");}
 :root{--i-maui:url("img/maui.jpg");}
 :root{--i-rei:url("img/rei.jpg");--i-reitag:url("img/reitag.jpg");--i-reibrief:url("img/reibrief.jpg");--i-reiinsight:url("img/reiinsight.jpg");--i-reigrid:url("img/reigrid.jpg");}
@@ -1969,6 +1969,10 @@ body[data-view="archive"],body[data-view="archive"]::before,#v-archive{backgroun
 .rx-seg button[aria-pressed="true"]{background:#F4F0E7!important;color:#1F1D19!important}
 .rx-seg button:hover{color:#F4F0E7!important}
 .rx-seg button[aria-pressed="true"]:hover{color:#1F1D19!important}
+
+/* real book cover */
+.sd-book.sd-cover{background:var(--i-nye) center/cover no-repeat!important;aspect-ratio:900/1420!important;padding:0!important;box-shadow:0 18px 34px rgba(0,0,0,.28)!important}
+.rxo-cover{display:block;width:100%;background-size:cover;background-position:center;box-shadow:0 14px 30px rgba(0,0,0,.35)}
 </style>
 
 <header class="top" id="topbar">
@@ -2146,8 +2150,8 @@ body[data-view="archive"],body[data-view="archive"]::before,#v-archive{backgroun
   <section class="sd-ch sd-last">
     <div class="sd-chh"><span class="sd-num">III.</span><h2>On my desk</h2><span class="sd-upd">Updated November 2026</span></div>
     <div class="sd-desk">
-      <div class="sd-book"><b>The Three Views of Man</b><small>Robert Nye</small></div>
-      <div><span class="sd-k">Currently reading</span><p class="sd-read">The Three Views of Man, by Robert Nye.</p></div>
+      <div class="sd-book sd-cover" role="img" aria-label="Three Views of Man by Robert D. Nye, my copy"></div>
+      <div><span class="sd-k">Currently reading</span><p class="sd-read"><i>Three Views of Man</i>, by Robert D. Nye. Freud, Skinner, and Carl Rogers on what makes people who they are.</p></div>
     </div>
     <div class="sd-think"><span class="sd-k">Can't stop thinking about</span><p>Caregiving. Memory. Archives. Rural communities. Why some stories get remembered and others disappear.</p></div>
     <a class="sd-end" href="#reading-room"><span>See everything I've collected</span><small>The collection →</small></a>
@@ -2695,7 +2699,7 @@ const CH=[
  {y:"Starting over",t:"Back home",img:"i-prairie",cap:"A daily walk",p:"I moved back to Atchison, went to work, and put everything into becoming the best version of myself."},
  {y:"Fall 2025",t:"Coming back to KU",img:"i-lake",cap:"Clinton Lake, Lawrence",p:"The best decision I've ever made. I fell in love with writing and research first, and then with design."},
  {y:"Today",t:"Where I am now",p:"I'm a third-year Interaction Design student at the University of Kansas, and the research is still my favorite part: the interviews, the archives, the one small detail that tells you who you're really designing for. Most of my work ends up being for people who are easy to overlook, like farm families, small towns, and families facing a hard diagnosis. Away from the desk, you'll find me on a tennis court, out on a trail, or on a long walk with a camera, either the film one my grandpa gave me or my DSLR. I'm still adding rings.",
-  lists:[["Currently building",["FLINT, a platform exploring lifelong livestock records","A healthcare ecosystem with a local sponsor"]],["Currently reading",["<i>The Three Views of Man</i> by Robert Nye"]],["Currently wondering",["How research turns into better design","Rural communities, caregiving, archives, and memory","Why certain stories get remembered and others disappear","How small we all feel in this world, and how the odds of being here make each of us special"]]]}
+  lists:[["Currently building",["FLINT, a platform exploring lifelong livestock records","A healthcare ecosystem with a local sponsor"]],["Currently reading",["<i>Three Views of Man</i> by Robert D. Nye"]],["Currently wondering",["How research turns into better design","Rural communities, caregiving, archives, and memory","Why certain stories get remembered and others disappear","How small we all feel in this world, and how the odds of being here make each of us special"]]]}
 ];
 let ring=CH.length-1, hover=-1, woodBase=null, woodGeo=null;
 const WEIGHT=[1.3,1.2,.8,.9,.5,.55,.7,.5,.9,1.2,1.1];
@@ -2890,7 +2894,7 @@ const RR={
  ],
  pages:[["i-ognb1","Notebook page, Old Growth"],["i-ognb2","Notebook page, Old Growth"],["i-stsketch2","Sketches, Stirton Cattle"]],
  shelf:{
-  reading:[{t:"The Three Views of Man",a:"Robert Nye",why:""}],
+  reading:[{t:"Three Views of Man",a:"Robert D. Nye",why:""}],
   thinking:["Caregiving","Memory","Archives","Rural communities","Why certain stories get remembered and others disappear"],
   saved:[] /* e.g. {t:"Title",kind:"Article",src:"Where it's from",url:"https://..."} */
  }
@@ -2925,7 +2929,7 @@ $("#st-down")?.addEventListener("click",()=>$("#story-rings").scrollIntoView({be
 const RX_ITEMS=[
  {g:"inv",kind:"object",img:"i-guernica",ar:"1568/1126",t:"The torn page",cap:"Front: Guernica",place:"Found in Atchison, Kansas",col:1,span:5,mt:0,flip:"i-owlside",trail:true,
   more:"A small, aged page with Guernica on it and a penciled “Picasso” underneath. Page [43] in the corner told me it was torn from a book, and that started a year of following it back to where it came from.",go:["Follow the whole trail","#r-the-page"],rel:[7,4]},
- {g:"desk",kind:"book",t:"The Three Views of Man",sub:"Robert Nye",cap:"Reading now",place:"On my desk",col:7,span:2,mt:140,more:"What I'm reading right now.",rel:[3]},
+ {g:"desk",kind:"book",img:"i-nye",ar:"900/1420",t:"Three Views of Man",sub:"Robert D. Nye",cap:"Reading now",place:"On my desk",col:7,span:2,mt:140,more:"What I'm reading right now.",rel:[3]},
  {g:"desk",kind:"photo",img:"i-desk",ar:"1508/1132",t:"Printed and highlighted",cap:"My desk",place:"Lawrence, Kansas",col:10,span:3,mt:40,more:"Printed articles, sticky notes, and the highlights I come back to.",rel:[2]},
  {g:"inv",kind:"paper",read:"the-page",t:"Art in Tragedy",cap:"Research paper",place:"Research paper · 2025",col:2,span:2,mt:70,more:"How Picasso made art out of his own grief, traced through one torn page.",rel:[1,7]},
  {g:"mar",kind:"note",t:"Research begins when something doesn't leave you alone.",cap:"Margin note",place:"From my notebook",col:5,span:3,mt:0,more:"A line from my notebook.",rel:[1]},
@@ -2955,7 +2959,7 @@ function rxObj(x,big){
     return `<span class="rxo-paper rxo-real"><span class="pp-sheet"><span class="pp-staple" aria-hidden="true"></span><span class="pp-name">${m.map(z=>`<span>${z}</span>`).join("")}</span><b class="pp-title">${d.title||x.t}</b><span class="pp-body">${d.paras.slice(0,3).join(" ")}</span></span></span>`}
     return `<span class="rxo-paper"><b>${x.t}</b><i></i>${big?"<small>Lauren Wheeler</small>":""}</span>`}
   if(x.kind==="note")return `<span class="rxo-note">${x.t}</span>`;
-  if(x.kind==="book")return `<span class="rxo-book"><b>${x.t}</b><small>${x.sub||""}</small></span>`;
+  if(x.kind==="book")return x.img?`<span class="rxo-img rxo-cover" style="background-image:var(--${x.img});aspect-ratio:${x.ar||"2/3"}" role="img" aria-label="${x.t}, ${x.sub||""}"></span>`:`<span class="rxo-book"><b>${x.t}</b><small>${x.sub||""}</small></span>`;
   return "";
 }
 function rxRender(){
