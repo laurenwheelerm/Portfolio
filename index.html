@@ -1980,6 +1980,9 @@ body[data-view="archive"],body[data-view="archive"]::before,#v-archive{backgroun
 .pj2-shots figure{min-width:0}
 .pj2-img.cut{box-shadow:none!important;background-size:contain!important;background-repeat:no-repeat!important;background-color:transparent!important}
 .pj2-shots figure:has(.pj2-img.cut[style*="rkscreens"]),.pj2-shots figure:has(.pj2-img[style*="tw2"]),.pj2-shots figure:has(.pj2-img[style*="tw3"]),.pj2-shots figure:has(.pj2-img[style*="tw4"]){grid-column:1/-1}
+
+:root{--i-umhidta:url("img/umhidta.jpg");--i-umframes:url("img/umframes.jpg");--i-umboard:url("img/umboard.jpg");--i-umframes2:url("img/umframes2.jpg");--i-umnotes:url("img/umnotes.jpg");--i-umpills:url("img/umpills.jpg");--i-umch2:url("img/umch2.jpg");--i-umchina:url("img/umchina.jpg");--i-umborder:url("img/umborder.jpg");--i-umroads:url("img/umroads.jpg");--i-umtown:url("img/umtown.jpg");--i-umbreath:url("img/umbreath.jpg");--i-umminutes:url("img/umminutes.jpg");--i-umstats:url("img/umstats.jpg");--i-umyours:url("img/umyours.jpg");--i-umdots:url("img/umdots.jpg");--i-umsurvived:url("img/umsurvived.jpg");--i-umwall:url("img/umwall.jpg");--i-umstory:url("img/umstory.jpg");--i-ttgreek:url("img/ttgreek.jpg");--i-ttboards:url("img/ttboards.jpg");--i-ogfield:url("img/ogfield.jpg");--i-stwall:url("img/stwall.jpg");--i-stjerome:url("img/stjerome.jpg");--i-aiprints:url("img/aiprints.jpg");--i-aiempty:url("img/aiempty.jpg");--i-aiframes:url("img/aiframes.jpg");--i-aiheron:url("img/aiheron.jpg");--i-airoom:url("img/airoom.jpg");--i-mehero:url("img/mehero.jpg");--i-mebench:url("img/mebench.jpg");--i-mecar:url("img/mecar.jpg");--i-mecar2:url("img/mecar2.jpg");--i-meleaf:url("img/meleaf.jpg");--i-mefield:url("img/mefield.jpg");--i-memirror:url("img/memirror.jpg");--i-mebday:url("img/mebday.jpg");--i-memanitou:url("img/memanitou.jpg");--i-memanitou2:url("img/memanitou2.jpg");--i-mebike:url("img/mebike.jpg");--i-mehorse:url("img/mehorse.jpg");--i-wycanoe:url("img/wycanoe.jpg");--i-wybarn:url("img/wybarn.jpg");--i-wyhouse:url("img/wyhouse.jpg");--i-wytrail:url("img/wytrail.jpg");--i-wyfog:url("img/wyfog.jpg");--i-rrtranscript:url("img/rrtranscript.jpg");--i-rrpapers:url("img/rrpapers.jpg");--i-rrlaptop:url("img/rrlaptop.jpg");--i-rrdoodle:url("img/rrdoodle.jpg");--i-rrmystery:url("img/rrmystery.jpg");--i-rrlife:url("img/rrlife.jpg");--i-rrfilm:url("img/rrfilm.jpg");--i-rrfrost:url("img/rrfrost.jpg");--i-rrspitfire:url("img/rrspitfire.jpg");--i-rrdudle:url("img/rrdudle.jpg");--i-rrolympus:url("img/rrolympus.jpg");--i-rrrockchalk:url("img/rrrockchalk.jpg");}
+#home-hello>.plate{background:#26221C var(--i-wyfog) center 55%/cover no-repeat!important}
 </style>
 
 <header class="top" id="topbar">
@@ -2085,7 +2088,7 @@ body[data-view="archive"],body[data-view="archive"]::before,#v-archive{backgroun
 <!-- STORY -->
 <section class="view" id="v-my-story" hidden>
   <div class="st-intro">
-    <figure class="st-hero"><div class="plate img" role="img" aria-label="Lauren, behind the camera" style="background:var(--i-camera) 50% 42%/cover no-repeat"></div></figure>
+    <figure class="st-hero"><div class="plate img" role="img" aria-label="Lauren waving from a trail in the Flint Hills" style="background:var(--i-mehero) 50% 62%/cover no-repeat"></div></figure>
     <div class="wrap st-intro-text">
       <h1 class="label st-k">My story</h1>
       <p class="st-intro-lead">A tree adds a ring every year, the good ones and the hard ones. In a real tree, hard years leave narrow rings.</p>
@@ -2200,6 +2203,7 @@ body[data-view="archive"],body[data-view="archive"]::before,#v-archive{backgroun
 /* ---------- data ---------- */
 const P=[
  {id:"unmarked-mile",t:"The Unmarked Mile",cat:"interaction",disc:"Data visualization, scrollytelling",yr:"2026",team:"With Rebecca Rice and Kaden Gillam",tone:"i-um",ar:"2/1",
+  shots:["i-umch2","i-umchina","i-umborder","i-umroads","i-umtown","i-umpills","i-umbreath","i-umminutes","i-umstats","i-umdots","i-umyours","i-umsurvived","i-umwall","i-umstory"],
   link:["See the live story","https://claude.ai/artifact/M5X3ZaACmgrC36DntouGDr"],
   why:"How fentanyl reaches small towns in Kansas, what it does, and who it takes, told with the person kept in frame.",
   quote:"This one is close to my heart. Behind every number is a person, a family, a hometown. I wanted the story told with that kind of care.",
@@ -2207,7 +2211,7 @@ const P=[
   research:"Data from the CDC's National Center for Health Statistics, NORC at the University of Chicago, the DEA, U.S. Customs and Border Protection, the Office of the Director of National Intelligence, and SAMHSA, always weighed against the real people behind the data."},
  {id:"old-growth",t:"Old Growth",cat:"brand",disc:"Conference identity",yr:"2026",team:"Solo",tone:"i-og",ar:"838/656",
   link:["See the full identity system on Behance","https://www.behance.net/gallery/249063553/OLD-GROWTH-Conference-Identity-System"],
-  shots:["i-og4","i-ogprogram","i-og5","i-og3","i-og16","i-og9","i-og8","i-og6"],resImg:["i-redwoods","i-ognb1","i-ogthumbs","i-ognb2"],
+  shots:["i-og4","i-ogprogram","i-og5","i-og3","i-og16","i-og9","i-og8","i-og6"],resImg:["i-redwoods","i-ogfield","i-ognb1","i-ogthumbs","i-ognb2"],
   why:"A three-day, invite-only conference held entirely inside the ancient coast redwoods of Jedediah Smith State Park.",
   quote:"The redwoods were the first place I felt alive again after losing someone I loved. I built this for whoever needs that next.",
   work:"OLD GROWTH is for people who need to be reminded that the world contains things worth staying for. Eight scientists. No stage. No podium. No technology. Invite only. If this found you, someone thought you needed it. The identity lives on paper and in the woods: letterpress-style invitations and postcards, speaker badges, a fold-out field program, trail maps, matchbooks, an enamel camp mug, and a bottle that says \"Always Living.\"",
@@ -2242,7 +2246,7 @@ const P=[
   research:"It started with hand sketches, working out how one line could be both the lettering and the animal, and with time spent around the herd itself. Both of the cattle photos are mine."},
  {id:"tiny-torches",t:"Tiny Torches",cat:"brand",disc:"Packaging & brand identity",yr:"2026",team:"Solo",tone:"i-tt",ar:"836/654",
   link:["See the full case study on Behance","https://www.behance.net/gallery/246619487/Tiny-Torches"],
-  shots:["i-ttcards","i-ttpack","i-ttboard","i-tthand","i-ttboxes","i-ttlogos","i-tthow","i-ttcolors","i-ttshirt","i-ttparty"],resImg:["i-ttpattern","i-ttscreen","i-ttcard"],
+  shots:["i-ttcards","i-ttpack","i-ttboard","i-tthand","i-ttboxes","i-ttlogos","i-tthow","i-ttcolors","i-ttshirt","i-ttparty"],resImg:["i-ttgreek","i-ttboards","i-ttpattern","i-ttscreen","i-ttcard"],
   why:"A white-elephant packaging assignment: I drew a pack of Dollar Tree birthday candles and gave them a brand rooted in where birthday candles began.",
   quote:"Birthday candles go back to ancient Greece. Looking back, I wish I'd trusted that idea all the way.",
   work:"This started as a white-elephant assignment. Everyone drew a Dollar Tree item at random, and I got a pack of birthday candles. Digging into their history, I found the custom is often traced to ancient Greece, where people are said to have lit candles on moon-shaped cakes for Artemis. That's where the name Tiny Torches comes from, and my first direction leaned all the way in: a playful, slightly irreverent Greek take. With feedback from my professor I moved toward a more familiar birthday look, but kept the part I loved most, the hand-drawn feel. The palette came straight from the candles in the pack: celebration blue, birthday cake yellow, party flame orange, and vanilla icing white. The system includes a logo in three colorways, hand-drawn stickers and doodles, a how-to-use panel, packaging dielines, and a T-shirt, set in RL Horizon with Inter and photographed at a real party.",
@@ -2445,7 +2449,7 @@ function renderHub(){
 }
 
 /* ---------- project ---------- */
-const SAR={"i-reitag":"1999/717","i-reibrief":"2/1","i-reiinsight":"2/1","i-stirton":"1508/982","i-stscript":"1534/954","i-calf":"1676/1102","i-reigrid":"1398/1192","i-stsketch2":"860/802","i-rk1":"800/1008","i-rk2":"800/715","i-rk3":"800/731","i-rk4":"800/756","i-rk6":"800/1246","i-rk7":"800/508","i-rk8":"800/826","i-rk5":"800/1840","i-og3":"800/600","i-og4":"800/316","i-og5":"800/800","i-og6":"800/533","i-og8":"800/533","i-og9":"800/571","i-og16":"800/460","i-cu7":"800/617","i-cu14":"800/514","i-ttpack":"800/417","i-ttlogos":"800/167","i-ttcard":"800/418","i-ttshirt":"800/660","i-tthow":"800/638","i-ttcolors":"800/643","i-ttparty":"800/345","i-ttpattern":"800/332","i-ttabout":"800/460","i-ognb1":"1300/991","i-ognb2":"1300/929","i-owl":"900/1230","i-redwoods":"748/1128","i-rkscreens":"1800/859","i-reiemail":"457/930","i-tw1":"1250/869","i-tw2":"1600/466","i-tw3":"1600/466","i-tw4":"1600/466","i-twwall":"852/952","i-ogprogram":"1800/995","i-ogthumbs":"1770/345","i-ttboxes":"858/1068","i-tthand":"1598/1136","i-ttscreen":"1508/1056","i-ttboard":"776/986","i-ttcards":"722/1126","i-stolen":"1760/355","i-bench":"796/996"};
+const SAR={"i-reitag":"1999/717","i-reibrief":"2/1","i-reiinsight":"2/1","i-stirton":"1508/982","i-stscript":"1534/954","i-calf":"1676/1102","i-reigrid":"1398/1192","i-stsketch2":"860/802","i-rk1":"800/1008","i-rk2":"800/715","i-rk3":"800/731","i-rk4":"800/756","i-rk6":"800/1246","i-rk7":"800/508","i-rk8":"800/826","i-rk5":"800/1840","i-og3":"800/600","i-og4":"800/316","i-og5":"800/800","i-og6":"800/533","i-og8":"800/533","i-og9":"800/571","i-og16":"800/460","i-cu7":"800/617","i-cu14":"800/514","i-ttpack":"800/417","i-ttlogos":"800/167","i-ttcard":"800/418","i-ttshirt":"800/660","i-tthow":"800/638","i-ttcolors":"800/643","i-ttparty":"800/345","i-ttpattern":"800/332","i-ttabout":"800/460","i-ognb1":"1300/991","i-ognb2":"1300/929","i-owl":"900/1230","i-redwoods":"748/1128","i-rkscreens":"1800/859","i-reiemail":"457/930","i-tw1":"1250/869","i-tw2":"1600/466","i-tw3":"1600/466","i-tw4":"1600/466","i-twwall":"852/952","i-ogprogram":"1800/995","i-ogthumbs":"1770/345","i-ttboxes":"858/1068","i-tthand":"1598/1136","i-ttscreen":"1508/1056","i-ttboard":"776/986","i-ttcards":"722/1126","i-stolen":"1760/355","i-bench":"796/996","i-umhidta":"441/504","i-umframes":"429/1379","i-umboard":"1070/1120","i-umframes2":"514/1394","i-umnotes":"984/757","i-umpills":"1700/570","i-umch2":"1681/993","i-umchina":"1700/862","i-umborder":"1700/817","i-umroads":"1413/878","i-umtown":"1569/1152","i-umbreath":"1700/861","i-umminutes":"990/794","i-umstats":"1700/865","i-umyours":"1700/1111","i-umdots":"1700/771","i-umsurvived":"970/380","i-umwall":"1128/1259","i-umstory":"1292/948","i-ttgreek":"1700/328","i-ttboards":"1700/360","i-ogfield":"752/1082","i-stwall":"1510/1134","i-stjerome":"1510/1067","i-aiprints":"849/1036","i-aiempty":"1386/1048","i-aiframes":"843/894","i-aiheron":"1644/1126","i-airoom":"1698/1137","i-mehero":"1690/1127","i-mebench":"1699/812","i-mecar":"1571/950","i-mecar2":"1560/1135","i-meleaf":"1698/1132","i-mefield":"1696/1132","i-memirror":"1684/1012","i-mebday":"639/886","i-memanitou":"1692/1126","i-memanitou2":"1588/1052","i-mebike":"849/1129","i-mehorse":"845/1105","i-wycanoe":"851/1130","i-wybarn":"1590/1003","i-wyhouse":"1630/1114","i-wytrail":"754/1120","i-wyfog":"1699/1134","i-rrtranscript":"851/980","i-rrpapers":"851/1078","i-rrlaptop":"847/956","i-rrdoodle":"627/780","i-rrmystery":"770/1007","i-rrlife":"848/970","i-rrfilm":"774/1058","i-rrfrost":"1510/1022","i-rrspitfire":"824/1088","i-rrdudle":"520/693","i-rrolympus":"834/1004","i-rrrockchalk":"845/658"};
 Object.assign(SAR,{"i-ai01": "1300/892", "i-ai02": "1300/866", "i-ai03": "1300/866", "i-ai04": "1300/866", "i-ai05": "1300/867", "i-ai06": "867/1300", "i-ai07": "1300/867", "i-ai08": "1300/867", "i-ai09": "1300/867", "i-ai10": "1300/867", "i-ai11": "867/1300", "i-ai12": "1300/867", "i-ai13": "1300/867", "i-ai14": "1300/867", "i-ai15": "1300/867", "i-ai16": "1300/867", "i-ai17": "1300/867", "i-ai18": "867/1300", "i-ai19": "867/1300"});
 const STAMP_YR={"i-sunset":"2026","i-horses":"2026","i-barnsil":"2026","i-silos":"2026","i-barnflag":"2026"};
 const STAMP_CAP={"i-sunset":"Kansas sunset","i-horses":"Horse pasture","i-barnsil":"Barn at sundown","i-silos":"Silos, Atchison County","i-barnflag":"Family farm","i-redwoods":"The redwoods","i-sketch":"Where my brain goes","i-guernica":"The page"};
@@ -2481,6 +2485,13 @@ function renderProcess(p){
    TRAIL2[id]: the research trail, in order. Each step: {k:label, h:heading, p:text, img:image key, cap:caption} or {quote:"..."}.
    DURING[id]: "During this time", a time capsule: [image key or null, caption]. null = a spot waiting for a photo. */
 const TRAIL2={
+ "unmarked-mile":[
+  {k:"Where it started",h:"Government reports before anything was drawn.",p:"HIDTA assessments for Kansas and the Midwest, DEA intelligence reports, and CDC data, pulled into one board so we could see what the numbers actually said.",img:"i-umhidta",cap:"The research board: HIDTA, DEA, and Kansas reports"},
+  {k:"What I studied",h:"It travels the same highways I drive home on.",p:"Interstate maps, Kansas HIDTA counties, and DEA flow maps, next to notebook wireframes for hovering over highways and a split-screen timeline.",img:"i-umnotes",cap:"Notebook wireframes beside the maps"},
+  {quote:"This is a story about fentanyl. But really, it's about people."},
+  {k:"How it took shape",h:"Every chapter, tried more than once.",p:"We laid the story out frame by frame in Figma: the globe, the border, the interstates, the breathing line, then reworked each one until it held a single idea.",img:"i-umboard",cap:"The Figma board"},
+  {k:"The final direction",h:"Quiet, then personal.",p:"It ends on the reader's own state and the Quiet Wall, a place to leave a note in memory or in recovery.",img:"i-umyours",cap:"Here's yours: the reader's own state"}
+ ],
  "old-growth":[
   {k:"Who it's for",h:"People who need to be reminded that the world contains things worth staying for.",p:"Eight scientists, no stage, no podium, invite only. If this found you, someone thought you needed it."},
   {k:"Where it started",h:"A notebook page about what it was, and what it was not.",p:"Not some millennial conference about getting grounded. Not simplistic. Not minimal.",img:"i-ognb1",cap:"Notebook: what it is, and what it isn't"},
@@ -2494,7 +2505,7 @@ const TRAIL2={
 const DURING={
  "unmarked-mile":[[null,"screenshots"],[null,"maps"],[null,"notebook pages"],[null,"articles"],[null,"road photos"],[null,"sunsets"],[null,"books"],[null,"whiteboards"]],
  "old-growth":[["i-redwoods","the trees"],[null,"trails"],[null,"type explorations"],["i-ognb2","notebook, names"],[null,"references"],[null,"books"]],
- "solo-exhibition":[[null,"gallery installation"],[null,"prints"],[null,"tape measures"],[null,"getting it there"],[null,"opening night"]]
+ "solo-exhibition":[["i-aiprints","matting the prints"],["i-aiempty","the empty gallery"],["i-aiframes","frames, waiting"],["i-aiheron","hanging the heron"],["i-airoom","the finished room"]]
 };
 function trailFor(p){
   if(TRAIL2[p.id])return TRAIL2[p.id];
@@ -2707,7 +2718,7 @@ const CH=[
  {y:"2024",t:"Loss",p:"I lost people I loved. Grief pushed me to become someone they'd be proud of, and it still shapes the work I choose to do."},
  {y:"Starting over",t:"Back home",img:"i-prairie",cap:"A daily walk",p:"I moved back to Atchison, went to work, and put everything into becoming the best version of myself."},
  {y:"Fall 2025",t:"Coming back to KU",img:"i-lake",cap:"Clinton Lake, Lawrence",p:"The best decision I've ever made. I fell in love with writing and research first, and then with design."},
- {y:"Today",t:"Where I am now",p:"I'm a third-year Interaction Design student at the University of Kansas, and the research is still my favorite part: the interviews, the archives, the one small detail that tells you who you're really designing for. Most of my work ends up being for people who are easy to overlook, like farm families, small towns, and families facing a hard diagnosis. Away from the desk, you'll find me on a tennis court, out on a trail, or on a long walk with a camera, either the film one my grandpa gave me or my DSLR. I'm still adding rings.",
+ {y:"Today",t:"Where I am now",img:"i-mebench",cap:"Right now",pos:"50% 30%",p:"I'm a third-year Interaction Design student at the University of Kansas, and the research is still my favorite part: the interviews, the archives, the one small detail that tells you who you're really designing for. Most of my work ends up being for people who are easy to overlook, like farm families, small towns, and families facing a hard diagnosis. Away from the desk, you'll find me on a tennis court, out on a trail, or on a long walk with a camera, either the film one my grandpa gave me or my DSLR. I'm still adding rings.",
   lists:[["Currently building",["FLINT, a platform exploring lifelong livestock records","A healthcare ecosystem with a local sponsor"]],["Currently reading",["<i>Three Views of Man</i> by Robert D. Nye"]],["Currently wondering",["How research turns into better design","Rural communities, caregiving, archives, and memory","Why certain stories get remembered and others disappear","How small we all feel in this world, and how the odds of being here make each of us special"]]]}
 ];
 let ring=CH.length-1, hover=-1, woodBase=null, woodGeo=null;
@@ -2939,8 +2950,6 @@ $("#st-down")?.addEventListener("click",()=>$("#story-rings").scrollIntoView({be
 const RX_ITEMS=[
  {g:"inv",kind:"object",img:"i-guernica",ar:"1568/1126",t:"The torn page",cap:"Front: Guernica",place:"Found in Atchison, Kansas",col:1,span:5,mt:0,flip:"i-owlside",trail:true,
   more:"A small, aged page with Guernica on it and a penciled “Picasso” underneath. Page [43] in the corner told me it was torn from a book, and that started a year of following it back to where it came from.",go:["Follow the whole trail","#r-the-page"],rel:[7,4]},
- {g:"mar",kind:"scan",img:"i-stolen",ar:"1760/355",t:"Layout sketches, stolen paintings",cap:"Sketchbook",place:"Lawrence, Kansas",col:1,span:12,mt:60,more:"Thumbnail sketches for an art gallery data visualization about stolen paintings: floor plans, walls, and how the missing work could be counted."},
- {g:"mar",kind:"scan",img:"i-bench",ar:"776/996",t:"Bench coloring sheet",cap:"Wandering drawing",place:"Lawrence Transit, Freedom by Design",col:4,span:4,mt:40,more:"My wandering-line drawing for Freedom by Design's benches for Lawrence Transit."},
  {g:"desk",kind:"book",img:"i-nye",ar:"900/1420",t:"Three Views of Man",sub:"Robert D. Nye",cap:"Reading now",place:"On my desk",col:7,span:2,mt:140,more:"What I'm reading right now.",rel:[3]},
  {g:"desk",kind:"photo",img:"i-desk",ar:"1508/1132",t:"Printed and highlighted",cap:"My desk",place:"Lawrence, Kansas",col:10,span:3,mt:40,more:"Printed articles, sticky notes, and the highlights I come back to.",rel:[2]},
  {g:"inv",kind:"paper",read:"the-page",t:"Art in Tragedy",cap:"Research paper",place:"Research paper · 2025",col:2,span:2,mt:70,more:"How Picasso made art out of his own grief, traced through one torn page.",rel:[1,7]},
@@ -2957,7 +2966,24 @@ const RX_ITEMS=[
  {g:"mar",kind:"scan",img:"i-ognb2",ar:"1300/929",t:"Names and big ideas",cap:"Notebook spread",place:"Notebook · Old Growth",col:1,span:4,mt:60,more:"Name ideas and the big ideas behind Old Growth.",go:["See Old Growth","#p-old-growth"],rel:[8,6]},
  {g:"mar",kind:"note",t:"Most people don't need more information. They need someone to make sense of it.",cap:"Margin note",place:"From my notebook",col:6,span:3,mt:0,more:"A line from my notebook.",rel:[9]},
  {g:"mar",kind:"scan",img:"i-sketch",ar:"842/1138",t:"Wandering drawings",cap:"Sketchbook",place:"Sketchbook",col:10,span:3,mt:80,more:"Drawings where I don't think. My hand wanders and my brain gets out onto the page.",rel:[17]},
- {g:"mar",kind:"scan",img:"i-stsketch2",ar:"860/802",t:"Lettering studies",cap:"Sketchbook",place:"Sketches · Stirton Cattle",col:3,span:3,mt:20,more:"Hand sketches for the Stirton Cattle identity.",go:["See Stirton Cattle","#p-stirton-cattle"],rel:[16]}
+ {g:"mar",kind:"scan",img:"i-stsketch2",ar:"860/802",t:"Lettering studies",cap:"Sketchbook",place:"Sketches · Stirton Cattle",col:3,span:3,mt:20,more:"Hand sketches for the Stirton Cattle identity.",go:["See Stirton Cattle","#p-stirton-cattle"],rel:[16]},
+ {g:"mar",kind:"scan",img:"i-stolen",ar:"1760/355",t:"Layout sketches, stolen paintings",cap:"Sketchbook",place:"Lawrence, Kansas",col:1,span:12,mt:60,more:"Thumbnail sketches for an art gallery data visualization about stolen paintings: floor plans, walls, and how the missing work could be counted."},
+ {g:"mar",kind:"scan",img:"i-bench",ar:"776/996",t:"Bench coloring sheet",cap:"Wandering drawing",place:"Lawrence Transit, Freedom by Design",col:4,span:4,mt:40,more:"My wandering-line drawing for Freedom by Design's benches for Lawrence Transit."},
+ {"g": "inv", "kind": "photo", "img": "i-stwall", "t": "Stolen paintings, on the wall", "cap": "Data visualization", "place": "InDesign layout", "more": "A gallery-wall data visualization about stolen paintings: each missing work shown with its size, the year it was taken, and what it's worth.", "album": ["i-stwall", "i-stjerome", "i-stolen"], "col": 1, "span": 4, "mt": 40, "ar": "1510/1134"},
+ {"g": "inv", "kind": "photo", "img": "i-rrpapers", "t": "Humans versus AI", "cap": "Sources, printed", "place": "Research · Can AI Participate in the Creative Process?", "more": "The studies I printed and marked up for my paper on whether AI can take part in the creative process.", "col": 6, "span": 3, "mt": 110, "ar": "851/1078"},
+ {"g": "inv", "kind": "photo", "img": "i-rrlaptop", "t": "The value of creativity", "cap": "Highlighted", "place": "Research · Can AI Participate in the Creative Process?", "more": "Reading a study on how people value human-made art against AI-generated art, pen in hand.", "col": 10, "span": 3, "mt": 0, "ar": "847/956"},
+ {"g": "inv", "kind": "photo", "img": "i-rrtranscript", "t": "An interview, marked up", "cap": "Transcript and notebook", "place": "Research", "more": "An interview transcript, underlined, next to my notebook. The quotes I kept came from pages like this.", "col": 2, "span": 3, "mt": 90, "ar": "851/980"},
+ {"g": "mar", "kind": "scan", "img": "i-rrmystery", "t": "Creativity is seemingly a mystery", "cap": "Bracketed in red", "place": "Book margin", "more": "A passage on why creativity is so hard to explain, marked in red.", "col": 6, "span": 4, "mt": 20, "ar": "770/1007"},
+ {"g": "mar", "kind": "scan", "img": "i-rrfilm", "t": "Notes on experimental film", "cap": "Notebook page", "place": "Notebook", "more": "Notes on A Short Vision (1956), Jordan Belson, and the filmmakers who scratched straight onto 16mm film.", "col": 10, "span": 3, "mt": 130, "ar": "774/1058"},
+ {"g": "mar", "kind": "scan", "img": "i-rrfrost", "t": "On the road not taken", "cap": "Page 49", "place": "Book page", "more": "A reading of Frost's poem that stayed with me: you never get to learn where the other road went.", "col": 1, "span": 5, "mt": 60, "ar": "1510/1022"},
+ {"g": "mar", "kind": "photo", "img": "i-rrlife", "t": "Life is...", "cap": "Mother Teresa", "place": "Framed print", "more": "A framed print of Mother Teresa's “Life is...”", "col": 7, "span": 3, "mt": 0, "ar": "848/970"},
+ {"g": "mar", "kind": "scan", "img": "i-rrdoodle", "t": "Wandering drawing", "cap": "Notebook", "place": "Notebook", "more": "My hand moves and my brain gets out onto the page.", "album": ["i-rrdoodle", "i-rrdudle", "i-sketch", "i-bench"], "col": 10, "span": 3, "mt": 100, "ar": "627/780"},
+ {"g": "desk", "kind": "object", "img": "i-rrolympus", "t": "Grandpa's Olympus-35", "cap": "Film camera", "place": "From his Air Force days in Alaska", "more": "My grandpa's Olympus-35 LC, from his time in the Air Force in Alaska. It's the camera that got me into film photography.", "col": 3, "span": 3, "mt": 40, "ar": "834/1004"},
+ {"g": "desk", "kind": "photo", "img": "i-wyfog", "t": "Grand Teton, Wyoming", "cap": "Album · 7 photos", "place": "Grand Teton National Park, Wyoming", "more": "Fog on the Tetons, a barn on the flats, the pink house, the trail, a canoe on the lake, and a horse at sunrise.", "album": ["i-wyfog", "i-wybarn", "i-wyhouse", "i-wycanoe", "i-wytrail", "i-mehorse", "i-mebike"], "col": 7, "span": 5, "mt": 90, "ar": "1699/1134"},
+ {"g": "desk", "kind": "photo", "img": "i-rrrockchalk", "t": "Rock Chalk", "cap": "Tennis courts", "place": "Lawrence, Kansas", "more": "The courts at KU, a few steps from the front desk I work at the Jayhawk Tennis Center.", "col": 1, "span": 3, "mt": 0, "ar": "845/658"},
+ {"g": "desk", "kind": "photo", "img": "i-memanitou", "t": "The Manitou Incline", "cap": "Album · 2 photos", "place": "Manitou Springs, Colorado", "more": "A break on the way up.", "album": ["i-memanitou", "i-memanitou2"], "col": 1, "span": 4, "mt": 40, "ar": "1692/1126"},
+ {"g": "desk", "kind": "photo", "img": "i-memirror", "t": "Along the way", "cap": "Album · 6 photos", "place": "Kansas and beyond", "more": "Car rides, a birthday, and the people who sometimes turn the camera around on me.", "album": ["i-memirror", "i-mecar", "i-mecar2", "i-meleaf", "i-mefield", "i-mebday"], "col": 6, "span": 3, "mt": 110, "ar": "1684/1012"},
+ {"g": "desk", "kind": "photo", "img": "i-rrspitfire", "t": "Saved from a magazine", "cap": "Spread", "place": "Magazine", "more": "A magazine spread I kept.", "col": 10, "span": 3, "mt": 0, "ar": "824/1088"}
 ].map((x,i)=>({...x,i,no:String(i+1).padStart(3,"0")}));
 const RX_KIND={photo:"Photograph",scan:"Notebook & sketch",paper:"Paper",note:"Note",book:"Book",object:"Found object"};
 const RX_SEC={inv:"Investigations",mar:"Marginalia",desk:"On my desk"};
@@ -2989,7 +3015,7 @@ function rxRender(){
     <button type="button" class="rx-clear" data-rxclear>Show everything</button>`;
   const fb=$("#rx-filter-btn");fb.classList.toggle("on",filtered);fb.querySelector("span").textContent=filtered?"Filtered":"Filter";
 }
-function rxActivate(i){const x=RX_ITEMS[i];if(!x)return;if(x.read){openReader(x.read);return}rxOpen(i)}
+function rxActivate(i){const x=RX_ITEMS[i];if(!x)return;if(x.read){openReader(x.read);return}if(x.album){galOpen({shots:x.album,t:x.t},0);return}rxOpen(i)}
 function rxOpen(i){
   const x=RX_ITEMS[i];if(!x)return;RX.open=i;RX.flipped=false;const el=$("#rxv");
   const rels=(x.rel||[]).map(n=>RX_ITEMS[n-1]).filter(Boolean);
@@ -3067,7 +3093,7 @@ function rotateSnap(){
 const PHOTO_NOTES={
   "i-guernica":"The torn-out book page I found at an antique store in Atchison. Guernica on the front, The Blue Owl on the back. It started a whole research trail.",
   "i-redwoods":"Jedediah Smith Redwoods State Park, California. The first place I felt alive again after a hard year. It became Old Growth.",
-  "i-sketch":"Wandering drawings. My hand moves and my brain gets out onto the page.","i-sunset":"A sunset in Wichita, Kansas."
+  "i-sketch":"Wandering drawings. My hand moves and my brain gets out onto the page.","i-sunset":"A sunset in Wichita, Kansas.","i-rrolympus":"My grandpa's Olympus-35, from his Air Force days in Alaska.","i-wyfog":"Grand Teton National Park, Wyoming.","i-memanitou":"The Manitou Incline, Colorado.","i-mehero":"The Flint Hills, Kansas."
 };
 const FLIP={"i-guernica":{back:"i-owlside",cap:"The back: The Blue Owl"}};let lbFace=null;
 function setFlip(t){const b=$("#lightbox .lb-flip"),im=$("#lightbox .lb-img");const bk=im.querySelector(".lb-back");if(bk)bk.hidden=true;
