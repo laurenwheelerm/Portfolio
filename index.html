@@ -1983,6 +1983,11 @@ body[data-view="archive"],body[data-view="archive"]::before,#v-archive{backgroun
 
 :root{--i-umhidta:url("img/umhidta.jpg");--i-umframes:url("img/umframes.jpg");--i-umboard:url("img/umboard.jpg");--i-umframes2:url("img/umframes2.jpg");--i-umnotes:url("img/umnotes.jpg");--i-umpills:url("img/umpills.jpg");--i-umch2:url("img/umch2.jpg");--i-umchina:url("img/umchina.jpg");--i-umborder:url("img/umborder.jpg");--i-umroads:url("img/umroads.jpg");--i-umtown:url("img/umtown.jpg");--i-umbreath:url("img/umbreath.jpg");--i-umminutes:url("img/umminutes.jpg");--i-umstats:url("img/umstats.jpg");--i-umyours:url("img/umyours.jpg");--i-umdots:url("img/umdots.jpg");--i-umsurvived:url("img/umsurvived.jpg");--i-umwall:url("img/umwall.jpg");--i-umstory:url("img/umstory.jpg");--i-ttgreek:url("img/ttgreek.jpg");--i-ttboards:url("img/ttboards.jpg");--i-ogfield:url("img/ogfield.jpg");--i-stwall:url("img/stwall.jpg");--i-stjerome:url("img/stjerome.jpg");--i-aiprints:url("img/aiprints.jpg");--i-aiempty:url("img/aiempty.jpg");--i-aiframes:url("img/aiframes.jpg");--i-aiheron:url("img/aiheron.jpg");--i-airoom:url("img/airoom.jpg");--i-mehero:url("img/mehero.jpg");--i-mebench:url("img/mebench.jpg");--i-mecar:url("img/mecar.jpg");--i-mecar2:url("img/mecar2.jpg");--i-meleaf:url("img/meleaf.jpg");--i-mefield:url("img/mefield.jpg");--i-memirror:url("img/memirror.jpg");--i-mebday:url("img/mebday.jpg");--i-memanitou:url("img/memanitou.jpg");--i-memanitou2:url("img/memanitou2.jpg");--i-mebike:url("img/mebike.jpg");--i-mehorse:url("img/mehorse.jpg");--i-wycanoe:url("img/wycanoe.jpg");--i-wybarn:url("img/wybarn.jpg");--i-wyhouse:url("img/wyhouse.jpg");--i-wytrail:url("img/wytrail.jpg");--i-wyfog:url("img/wyfog.jpg");--i-rrtranscript:url("img/rrtranscript.jpg");--i-rrpapers:url("img/rrpapers.jpg");--i-rrlaptop:url("img/rrlaptop.jpg");--i-rrdoodle:url("img/rrdoodle.jpg");--i-rrmystery:url("img/rrmystery.jpg");--i-rrlife:url("img/rrlife.jpg");--i-rrfilm:url("img/rrfilm.jpg");--i-rrfrost:url("img/rrfrost.jpg");--i-rrspitfire:url("img/rrspitfire.jpg");--i-rrdudle:url("img/rrdudle.jpg");--i-rrolympus:url("img/rrolympus.jpg");--i-rrrockchalk:url("img/rrrockchalk.jpg");}
 #home-hello>.plate{background:#26221C var(--i-wyfog) center 55%/cover no-repeat!important}
+
+.gr-n3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.gr-n3 .gr-half{aspect-ratio:4/3}
+.gr-n3 .gr-d{display:none}
+@media (max-width:760px){.gr-n3{grid-template-columns:minmax(0,1fr)}}
 </style>
 
 <header class="top" id="topbar">
@@ -2377,7 +2382,7 @@ const PG_MAIN=["unmarked-mile","old-growth","solo-exhibition","the-vault","roamk
 const PG_LINE={"unmarked-mile":"How fentanyl reaches small towns in America, what it does, and who it takes.","old-growth":"A conference held entirely in the redwoods, for people who need a reason to stay.","solo-exhibition":"A solo photography exhibition in the KU Student Union Gallery.","the-vault":"A Grand Slam tennis archive and concierge for members who keep their journey.","roamku":"Helping students find their people through what they already love."};
 const PG_SKIP=new Set(["ear-tag","wandering","from-dust"]);
 const PG_SPAN={"unmarked-mile":12,"old-growth":6,"solo-exhibition":6,"the-vault":6,"roamku":6};
-const GR_ROWS=[["unmarked-mile"],["old-growth","solo-exhibition"],["go-find-it"],["roamku","tiny-torches"],["the-vault"],["maui-gothic","typographic-workbook"],["stirton-cattle"]];
+const GR_ROWS=[["unmarked-mile"],["old-growth","solo-exhibition"],["go-find-it"],["roamku","tiny-torches"],["the-vault"],["maui-gothic","typographic-workbook","stirton-cattle"]];
 const GR_LIGHT=new Set([]),GR_BAKED=new Set(["unmarked-mile","go-find-it","maui-gothic","tiny-torches"]);
 function pvList(){const byId=Object.fromEntries(P.map(p=>[p.id,p]));return GR_ROWS.flat().map(id=>byId[id]).filter(Boolean)}
 let grView="tiles";
